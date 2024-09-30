@@ -22,6 +22,7 @@ body {
     margin: 20px;
     padding: 20px;
     border-radius: 8px;
+    flex-wrap: wrap;
   }
   
   h2 {
@@ -54,3 +55,18 @@ body {
     color: #999;
   }
   
+  /* this is grid stile for title*/
+  .grid_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1px ;
+    padding: 3%;  
+  }
+  
+  /* this is grid stile for subject*/
+   #title {
+    grid-column: 1 / 4;
+    border-radius: 20px;
+    text-align: center;
+    padding: 3%;
+   }
