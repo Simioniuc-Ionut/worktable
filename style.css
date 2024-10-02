@@ -64,8 +64,8 @@ body {
   }
   
   /* this is grid stile for subject*/
-   #title {
-    grid-column: 1 / 4;
+   #item1 {
+    grid-column: 1 / span  2;
     border-radius: 20px;
     text-align: center;
     padding: 3%;
