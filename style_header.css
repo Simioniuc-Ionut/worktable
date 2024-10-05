@@ -19,17 +19,17 @@ header::after {
 .logo {
   float: left;
   padding: 10px 0;
+  color: #0372bc;
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
-  float: right;
 }
 
 nav ul {
   margin: 0;
-  padding: 0;
+  padding: 10px 1%;
   list-style: none;
 }
 
@@ -37,7 +37,6 @@ nav li {
   display: inline-block;
   margin-left: 70px;
   padding-top: 23px;
-
   position: relative;
 }
 
@@ -51,10 +50,8 @@ nav a {
 nav a:hover {
   color: #000;
 }
-nav ul:first-child {
-  color: red;
-  
-
+nav li:first-child a {
+  color: rgb(134, 128, 128);
 }
 nav a::before {
   content: '';
