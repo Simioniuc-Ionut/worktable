@@ -1,4 +1,6 @@
+
 /* Global Styles */
+
 body {
     background-color: #232222;
     color: #d2cfcf;
@@ -7,7 +9,7 @@ body {
     padding: 0;
   }
   
-  header {
+  /* header {
     background-color: #333;
     padding: 20px;
     text-align: center;
@@ -19,7 +21,7 @@ body {
     flex-grow: 1;
     border-radius: 5%;
     flex-wrap: wrap;
-  }
+  } */
   
   h1 {
     color: #0372bc;
@@ -61,7 +63,7 @@ body {
     position: relative;
     bottom: 0;
     left: 0;
-  }
+  } */
  /* Global style for grid container */
 .grid_container {
   display: grid;
@@ -130,14 +132,14 @@ body {
       font-size: 18px;
     }
     
-    li {
+    .subject_title_div li {
       margin: 10px 0;
       position: relative;
       padding-left: 20px;
       font-size: 15px;
     }
 
-    li::before {
+    .subject_title_div li::before {
       content: '•';
       color: #ffd369;
       position: absolute;
