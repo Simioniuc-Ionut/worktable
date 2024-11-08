@@ -1,4 +1,3 @@
-/* Stiluri pentru header */
 .projects {
   padding: 2rem;
   max-width: 800px;
@@ -6,15 +5,14 @@
   text-align: center; /* Centrare text */
 }
 
-
 .projects h1 {
   margin-bottom: 1rem;
   font-size: 3rem; /* Dimensiune mai mare */
   font-style: italic; /* Text înclinat */
   font-weight: bold; /* Text îngroșat */
-  color: #0372bc; /* Culoare premium */
+  color: #335fb0; /* Culoare premium */
   text-transform: uppercase; /* Transformare text în majuscule */
-  background: linear-gradient(90deg, #0372bc, #00d4ff, #ffd369, #0372bc); /* Gradient ajustat */
+  background: linear-gradient(90deg, #335fb0, #00d4ff, #ffd369, #335fb0); /* Gradient ajustat */
   background-size: 300% 300%; /* Dimensiunea gradientului ajustată */
   -webkit-background-clip: text; /* Clip text */
   background-clip: text; /* Standard property for compatibility */
@@ -42,32 +40,20 @@
 }
 
 .project {
-  background-color: #333;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #333; /* Culoare de fundal ajustată */
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   text-align: left; /* Aliniere text la stânga */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Pentru poziționarea imaginii de previzualizare */
 }
 
-.project h2 {
-  margin-top: 0;
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
-
-.project p {
-  margin: 0.5rem 0;
-}
-
-.project a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-.project a:hover {
-  text-decoration: underline;
-}
-
-
 
 .project h2 {
   margin-top: 0;
@@ -110,4 +96,36 @@
 .tag:nth-child(4) {
   border-color: #dc3545; /* Bordură roșie pentru al patrulea tag */
   color: #dc3545; /* Text roșu */
+}
+
+.preview-link {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.preview {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preview img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project:hover .preview {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.project:hover .preview img {
+  transform: scale(1.1);
 }
