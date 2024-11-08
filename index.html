@@ -4,26 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Worktable</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style_header.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style_footer.css">
+  <div id="links"></div>
 
 </head>
-
-<header>
-    <div class="container_header">
-      <h3 class="logo"><a href="#"><h1>🌀</h1></a></h3>      
-      <nav>
-        <ul>
-          <li class = "https://worktable-nine.vercel.app"><a href="#">Home</a></li>
-          <li class = ""><a href="#">About</a></li>
-          <li class = ""><a href="#">Project</a></li>
-          <li class = ""><a href="#">Contact</a></li>  
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div id="header"></div>
 
 <body>
   
@@ -134,30 +118,27 @@
     </section>
   </div>
 
-  <footer>
-    <div class="footerContainer">
-        <div class="socialIcons">
-            <a href="https://www.linkedin.com/in/ionut-mihai-simioniuc-27b55b2b7/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/Simioniuc-Ionut"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.facebook.com/simioniuc.ionut?locale=ro_RO"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/simioniucionut/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://vercel.com/simioniuc-ionuts-projects"><img src="https://assets.vercel.com/image/upload/v1538361091/repositories/vercel/logo.png" alt="Vercel Logo" height="30"></a>
-            
-        </div>
-        <div class="footerNav">
-            <ul><li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Project</a></li>
-                <li><a href="">Contact Us</a></li>
-            </ul>
-        </div>
-        
-    </div>
-    <div class="footerBottom">
-        <p>Copyright &copy;2024</p>
-    </div>
-</footer>
+  <div id="footer"></div>
   <script src="nav_button.js"></script>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+     fetch('assets/includes/header.html')
+       .then(response => response.text())
+       .then(data => {
+         document.getElementById("header").innerHTML = data;
+       });
 
+     fetch('assets/includes/footer.html')
+       .then(response => response.text())
+       .then(data => {
+         document.getElementById("footer").innerHTML = data;
+       });
+     fetch('assets/includes/links.html')
+       .then(response => response.text())
+       .then(data => {
+         document.getElementById("links").innerHTML = data;
+       });
+   });
+</script>
 </html>

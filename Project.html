@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  <div id="links"></div>
+  <link rel="stylesheet" href="assets/css/style_propject.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <section class="projects">
+      <h1>My Projects</h1>
+      <h3 class="mini-title">Featured Projects</h3>
+      <article class="project">
+        <h2>Project 1</h2>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <p>Description of Project 1. This project is about...</p>
+        <a href="https://link-to-project1.com" target="_blank">View Project</a>
+      </article>
+      <article class="project">
+        <h2>Project 2</h2>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Django</span>
+          <span class="tag">SQL</span>
+        </div>
+        <p>Description of Project 2. This project is about...</p>
+        <a href="https://link-to-project2.com" target="_blank">View Project</a>
+      </article>
+    </section>
+  </main>
+  
+</body>
+<div id="footer"></div>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+      fetch('assets/includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("header").innerHTML = data;
+        });
+
+      fetch('assets/includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer").innerHTML = data;
+        });
+      fetch('assets/includes/links.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("links").innerHTML = data;
+        });
+    });
+</script>
+</html>

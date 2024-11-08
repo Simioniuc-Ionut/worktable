@@ -1,0 +1,113 @@
+/* Stiluri pentru header */
+.projects {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center; /* Centrare text */
+}
+
+
+.projects h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem; /* Dimensiune mai mare */
+  font-style: italic; /* Text înclinat */
+  font-weight: bold; /* Text îngroșat */
+  color: #0372bc; /* Culoare premium */
+  text-transform: uppercase; /* Transformare text în majuscule */
+  background: linear-gradient(90deg, #0372bc, #00d4ff, #ffd369, #0372bc); /* Gradient ajustat */
+  background-size: 300% 300%; /* Dimensiunea gradientului ajustată */
+  -webkit-background-clip: text; /* Clip text */
+  background-clip: text; /* Standard property for compatibility */
+  -webkit-text-fill-color: transparent; /* Text transparent */
+  animation: gradient-animation 5s infinite; /* Animație gradient */
+}
+
+/* Definirea animației gradient */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.mini-title {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.project {
+  background-color: #333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Aliniere text la stânga */
+}
+
+.project h2 {
+  margin-top: 0;
+}
+
+.project p {
+  margin: 0.5rem 0;
+}
+
+.project a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+
+
+.project h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #0372bc;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.project p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.tags {
+  margin-top: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  border: 2px solid #007BFF; /* Bordură albastră */
+  color: #007BFF; /* Text albastru */
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.5rem;
+  border-radius: 50px; /* Colțuri rotunjite */
+  font-size: 0.9rem;
+  background-color: transparent; /* Fundal transparent */
+}
+
+.tag:nth-child(2) {
+  border-color: #28a745; /* Bordură verde pentru al doilea tag */
+  color: #28a745; /* Text verde */
+}
+
+.tag:nth-child(3) {
+  border-color: #ffc107; /* Bordură galbenă pentru al treilea tag */
+  color: #ffc107; /* Text galben */
+}
+
+.tag:nth-child(4) {
+  border-color: #dc3545; /* Bordură roșie pentru al patrulea tag */
+  color: #dc3545; /* Text roșu */
+}
