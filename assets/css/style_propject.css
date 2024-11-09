@@ -59,7 +59,7 @@
   margin-top: 0;
   font-size: 2rem;
   color: #0372bc;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-bottom: 0.5rem;
 }
 
@@ -74,30 +74,62 @@
 
 .tag {
   display: inline-block;
-  border: 2px solid #007BFF; /* Bordură albastră */
-  color: #007BFF; /* Text albastru */
   padding: 0.3rem 0.6rem;
   margin-right: 0.5rem;
   border-radius: 50px; /* Colțuri rotunjite */
   font-size: 0.9rem;
   background-color: transparent; /* Fundal transparent */
+  border: 2px solid; /* Bordură */
+  color: inherit; /* Moștenire culoare text */
+  transition: transform 0.3s ease; /* Tranziție pentru hover */
 }
 
-.tag:nth-child(2) {
-  border-color: #28a745; /* Bordură verde pentru al doilea tag */
-  color: #28a745; /* Text verde */
+.tag:hover {
+  transform: scale(1.1); /* Efect de mărire la hover */
 }
 
-.tag:nth-child(3) {
-  border-color: #ffc107; /* Bordură galbenă pentru al treilea tag */
-  color: #ffc107; /* Text galben */
+.tag-html {
+  border-color: #ff6347; /* Bordură roșie deschisă pentru HTML */
+  color: #ff6347; /* Text roșu deschis */
 }
 
-.tag:nth-child(4) {
-  border-color: #dc3545; /* Bordură roșie pentru al patrulea tag */
-  color: #dc3545; /* Text roșu */
+.tag-css {
+  border-color: #1e90ff; /* Bordură albastră deschisă pentru CSS */
+  color: #1e90ff; /* Text albastru deschis */
 }
 
+.tag-js {
+  border-color: #ffeb3b; /* Bordură galbenă deschisă pentru JavaScript */
+  color: #ffeb3b; /* Text galben deschis */
+}
+
+.tag-python {
+  border-color: #87ceeb; /* Bordură albastră deschisă pentru Python */
+  color: #87ceeb; /* Text albastru deschis */
+}
+
+.tag-django {
+  border-color: #32cd32; /* Bordură verde deschisă pentru Django */
+  color: #32cd32; /* Text verde deschis */
+}
+
+.tag-sql {
+  border-color: #ffa500; /* Bordură portocalie deschisă pentru SQL */
+  color: #ffa500; /* Text portocaliu deschis */
+}
+
+.tag-Cpp {
+  border-color: #34aefa; /* Bordură roz deschis pentru C/C++ */
+  color: #34aefa; /* Text roz deschis */
+}
+.tag-C {
+  border-color: #34aefa; /* Bordură roz deschis pentru C/C++ */
+  color: #34aefa; /* Text roz deschis */
+}
+.tag-Php {
+  border-color: #af41ee; /* Bordură roz deschis pentru Php */
+  color: #af41ee; /* Text roz deschis */
+}
 .preview-link {
   display: block;
   margin-top: 1rem;
@@ -128,4 +160,28 @@
 
 .project:hover .preview img {
   transform: scale(1.1);
+}
+
+/* Media queries pentru responsive design */
+@media (max-width: 600px) {
+  .projects {
+    padding: 1rem;
+  }
+
+  .project {
+    padding: 1rem;
+  }
+
+  .project h2 {
+    font-size: 1.5rem;
+  }
+
+  .tag {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .preview {
+    max-height: 200px;
+  }
 }

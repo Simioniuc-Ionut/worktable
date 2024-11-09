@@ -14,30 +14,35 @@
       <h1>My Projects</h1>
       <h3 class="mini-title">Featured Projects</h3>
       <article class="project">
-        <h2>Project 1</h2>
+        <h2>Electron</h2>
         <div class="tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
+          <span class="tag tag-Cpp">C++</span>
         </div>
         <p>Description of Project 1. This project is about...</p>
-        <a href="https://link-to-project1.com" target="_blank" class="preview-link">
+        <a href="https://github.com/Simioniuc-Ionut/Electron-project" target="_blank" class="preview-link">
           <div class="preview">
-            <img src="assets/images/project1.png" alt="Project 1 Preview">
-          </div>
+            <video id="video-electron" width="560" height="315" controls>
+              <source src="assets/images/Electron.mp4" type="video/mp4">
+              
+            </video>
         </a>
       </article>
       <article class="project">
-        <h2>Project 2</h2>
+        <h2>RomanianDrugs-Web-Project</h2>
         <div class="tags">
-          <span class="tag">Python</span>
-          <span class="tag">Django</span>
-          <span class="tag">SQL</span>
+          <span class="tag tag-Php">PHP</span>
+          <span class="tag tag-html">HTML</span>
+          <span class="tag tag-css">CSS</span>
+          <span class="tag tag-js">JavaScript</span>
+          <span class="tag tag-sql">SQL</span>
         </div>
         <p>Description of Project 2. This project is about...</p>
-        <a href="https://link-to-project2.com" target="_blank" class="preview-link">
+        <a href="https://github.com/Simioniuc-Ionut/RomanianDrugs-Web-Project/tree/main/Documentatie" target="_blank" class="preview-link">
           <div class="preview">
-            <img src="assets/images/Home.png" alt="Project 2 Preview">
+              <video id="video-romanian-drugs" width="560" height="315" controls>
+                <source src="assets/images/Simioniuc Ionut 2B4 FII WEB PROJECT 2024.mp4" type="video/mp4">
+                
+              </video>
           </div>
         </a>
       </article>
@@ -53,7 +58,6 @@
         .then(data => {
           document.getElementById("header").innerHTML = data;
         });
-
       fetch('assets/includes/footer.html')
         .then(response => response.text())
         .then(data => {
@@ -64,6 +68,23 @@
         .then(data => {
           document.getElementById("links").innerHTML = data;
         });
+       // Video hover effect
+       function addVideoHoverEffect(videoId, startTime = 0) {
+        const video = document.getElementById(videoId);
+        video.muted = true; // Mute the video
+        video.addEventListener('loadedmetadata', function() {
+          video.addEventListener('mouseover', function() {
+            video.currentTime = startTime;
+            video.play();
+          });
+          video.addEventListener('mouseout', function() {
+            video.pause();
+            video.currentTime = 0;
+          });
+        });
+      }
+      addVideoHoverEffect('video-electron', 20);
+      addVideoHoverEffect('video-romanian-drugs'); 
     });
 </script>
 </html>
