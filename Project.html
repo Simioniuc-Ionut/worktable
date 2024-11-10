@@ -18,10 +18,19 @@
         <div class="tags">
           <span class="tag tag-Cpp">C++</span>
         </div>
-        <p>Description of Project 1. This project is about...</p>
+        <p>Electron is a software program designed to assist users in configuring their own electronic circuit diagrams. With Electron, you can create new projects, save them, and edit previously saved diagrams. We have implemented features such as:</p>
+        <div class="description">
+          <h3>Features:</h3>
+          <ul>
+            <li>Undo, Redo,Zoom In, Zoom Out ,Drag and drop, Rotations</li>
+            <li>Save,Load,Reset,Open an selected version</li>
+            <li>Real-time drawing of links between components</li>
+            <li>The ability to edit specific attributes of components on the diagram</li>
+          </ul>
+        </div>
         <a href="https://github.com/Simioniuc-Ionut/Electron-project" target="_blank" class="preview-link">
           <div class="preview">
-            <video id="video-electron" width="560" height="315" controls>
+            <video id="video-electron" width="560" height="315" muted autoplay>
               <source src="assets/images/Electron.mp4" type="video/mp4">
               
             </video>
@@ -30,17 +39,25 @@
       <article class="project">
         <h2>RomanianDrugs-Web-Project</h2>
         <div class="tags">
-          <span class="tag tag-Php">PHP</span>
+          <span class="tag tag-php">PHP</span>
           <span class="tag tag-html">HTML</span>
           <span class="tag tag-css">CSS</span>
           <span class="tag tag-js">JavaScript</span>
           <span class="tag tag-sql">SQL</span>
         </div>
-        <p>Description of Project 2. This project is about...</p>
+        <p>The purpose of the application is to provide users with both educational and analytical software.</p>
+        <div class="description">
+          <h3>Features:</h3>
+          <ul>
+            <li>Filter by specific types of drugs to search for information.</li>
+            <li>Generate graphs that display data about consumption or crime over a certain period of time.</li>
+            <li>Extract documents in HTML and CSV format with analytical data related to the respective drug.</li>
+          </ul>
+        </div>
         <a href="https://github.com/Simioniuc-Ionut/RomanianDrugs-Web-Project/tree/main/Documentatie" target="_blank" class="preview-link">
           <div class="preview">
-              <video id="video-romanian-drugs" width="560" height="315" controls>
-                <source src="assets/images/Simioniuc Ionut 2B4 FII WEB PROJECT 2024.mp4" type="video/mp4">
+              <video id="video-romanian-drugs" width="560" height="315" muted autoplay>
+                <source src="assets/images/Simioniuc Ionut 2B4 FII WEB PROJECT 2024.mp4" type="video/mp4" >
                 
               </video>
           </div>
@@ -71,7 +88,6 @@
        // Video hover effect
        function addVideoHoverEffect(videoId, startTime = 0) {
         const video = document.getElementById(videoId);
-        video.muted = true; // Mute the video
         video.addEventListener('loadedmetadata', function() {
           video.addEventListener('mouseover', function() {
             video.currentTime = startTime;
@@ -84,7 +100,7 @@
         });
       }
       addVideoHoverEffect('video-electron', 20);
-      addVideoHoverEffect('video-romanian-drugs'); 
+      addVideoHoverEffect('video-romanian-drugs',10); 
     });
 </script>
 </html>
