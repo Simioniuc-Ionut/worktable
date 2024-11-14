@@ -134,11 +134,6 @@
   color: #87ceeb; /* Text albastru deschis */
 }
 
-.tag-django {
-  border-color: #32cd32; /* Bordură verde deschisă pentru Django */
-  color: #32cd32; /* Text verde deschis */
-}
-
 .tag-sql {
   border-color: #ffa500; /* Bordură portocalie deschisă pentru SQL */
   color: #ffa500; /* Text portocaliu deschis */
