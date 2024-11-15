@@ -55,7 +55,7 @@ nav a:hover {
   color: #000;
 }
 nav li:first-child a {
-  color: rgb(134, 128, 128);
+  color: #ffd369;
 }
 nav a::before {
   content: '';

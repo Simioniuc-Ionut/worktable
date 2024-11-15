@@ -1,6 +1,6 @@
 .projects {
   padding: 2rem;
-  max-width: 800px;
+  max-width: 50rem;
   margin: 0 auto;
   text-align: center; /* Centrare text */
 }
@@ -162,8 +162,8 @@
   height: auto;
   max-height: 25rem;  
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  box-shadow: 0 0 10px #555;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .preview video {
@@ -173,21 +173,21 @@
   object-fit: cover; /* Asigură că videoclipul acoperă complet containerul */
 }
 
-.preview img {
+/* .preview img {
   width: 100%;
   height: auto;
   object-fit: cover;
   transition: transform 0.3s ease;
-}
+} */
 
-.project:hover .preview {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+.project:hover .preview{
+  transform: scale(1.09);
+  box-shadow: 0 0 20px #eae7e0a3;
 }
 
 .project:hover .preview img,
 .project:hover .preview video {
-  transform: scale(1.1);
+  transform: None;
 }
 
 
