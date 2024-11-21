@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  <div id="links"></div>
+  <link rel="stylesheet" href="assets/css/style_propject.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <section class="projects">
+      <h1>My Projects</h1>
+      <h3 class="mini-title">Featured Projects</h3>
+      <article class="project">
+        <h2>Electron</h2>
+        <div class="tags">
+          <span class="tag tag-Cpp">C++</span>
+        </div>
+        <p>Electron is a software program designed to assist users in configuring their own electronic circuit diagrams. With Electron, you can create new projects, save them, and edit previously saved diagrams. We have implemented features such as:</p>
+        <div class="description">
+          <h3>Features:</h3>
+          <ul>
+            <li>Undo, Redo,Zoom In, Zoom Out ,Drag and drop, Rotations</li>
+            <li>Save,Load,Reset,Open an selected version</li>
+            <li>Real-time drawing of links between components</li>
+            <li>The ability to edit specific attributes of components on the diagram</li>
+          </ul>
+        </div>
+        <a href="https://github.com/Simioniuc-Ionut/Electron-project" target="_blank" class="preview-link">
+          <div class="preview">
+            <video id="video-electron" width="560" height="315" muted autoplay>
+              <source src="assets/images/Electron.mp4" type="video/mp4">
+              
+            </video>
+        </a>
+      </article>
+      <article class="project">
+        <h2>RomanianDrugs-Web-Project</h2>
+        <div class="tags">
+          <span class="tag tag-php">PHP</span>
+          <span class="tag tag-html">HTML</span>
+          <span class="tag tag-css">CSS</span>
+          <span class="tag tag-js">JavaScript</span>
+          <span class="tag tag-sql">SQL</span>
+        </div>
+        <p>The purpose of the application is to provide users with both educational and analytical software.</p>
+        <div class="description">
+          <h3>Features:</h3>
+          <ul>
+            <li>Filter by specific types of drugs to search for information.</li>
+            <li>Generate graphs that display data about consumption or crime over a certain period of time.</li>
+            <li>Extract documents in HTML and CSV format with analytical data related to the respective drug.</li>
+            <li>Viewing a Romanian map with statistics for each region.</li>
+            <li>Possibility to manage data from an special administrator GUI.</li>
+            <li>Functionality of Login/Logout</li>
+          </ul>
+        </div>
+        <a href="https://github.com/Simioniuc-Ionut/RomanianDrugs-Web-Project/tree/main/Documentatie" target="_blank" class="preview-link">
+          <div class="preview">
+              <video id="video-romanian-drugs" width="560" height="315" muted autoplay>
+                <source src="assets/images/Simioniuc Ionut 2B4 FII WEB PROJECT 2024.mp4" type="video/mp4">
+              </video>
+          </div>
+        </a>
+      </article>
+    </section>
+  </main>
+
+</body>
+<div id="footer"></div>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+      fetch('assets/includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("header").innerHTML = data;
+        });
+      fetch('assets/includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer").innerHTML = data;
+        });
+      fetch('assets/includes/links.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("links").innerHTML = data;
+        });
+       // Video hover effect
+       function addVideoHoverEffect(videoId, startTime = 0) {
+        const video = document.getElementById(videoId);
+        video.addEventListener('loadedmetadata', function() {
+          video.addEventListener('mouseover', function() {
+            video.currentTime = startTime;
+            video.play();
+          });
+          video.addEventListener('mouseout', function() {
+            video.pause();
+            video.currentTime = 0;
+          });
+        });
+      }
+      addVideoHoverEffect('video-electron', 20);
+      addVideoHoverEffect('video-romanian-drugs',10); 
+    });
+</script>
+</html>

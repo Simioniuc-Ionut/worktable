@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #cccccc;
+  color: #333;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* About Me Section */
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-me h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: bold;
+  color: #335fb0;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, #335fb0, #00d4ff, #ffd369, #335fb0);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 5s infinite;
+}
+
+.about-me p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  color: #f4f4f4;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+/* Skills Section */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 coloane pe linie */
+  gap: 2rem;
+}
+
+.skill-card {
+  background-color: #555;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
+}
+
+
+.skill-card a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #0372bc;
+  color: #09080c;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.skill-card a:hover {
+  background-color: #005fa3;
+}
+
+
+.skill-card h2 {
+  font-size: 2rem;
+  color: #0372bc;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ffd369;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+
+.skill-card p {
+  color: #9b9b93;
+  font-size: 1.2rem;
+}.skill-card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.skill-card ul li {
+  padding: 0.5rem 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+.skill-card ul li::before {
+  content: ' ';
+  margin-right: 0.5rem;
+  color: #ffd369;
+}
+/* Stiluri pentru lista de competențe tehnice */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+/* Animație pentru gradient */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.cert-pdf {
+  width: 100%;
+  height: 500px;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Responsive Design */
+/* Pe dispozitive cu ecran mai mic de 1024px (tablete) */
+@media (max-width: 1024px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 coloane pe tablete */
+  }
+}
+
+/* Pe dispozitive cu ecran mai mic de 768px (telefoane mobile) */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr; 
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: 1fr; 
+  }
+}
+body {
+  background: linear-gradient(180deg, #151414, #2b2b2b);
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

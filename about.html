@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="assets/css/style_about.css">
+  <div id="links"></div>
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <section class="about-me">
+      <div class="about-me-details">
+        <h1>About Me</h1>
+        <p>Hello, I'm Simioniuc Ionut, a passionate Computer Science student with a strong interest in software development. I thrive on learning new technologies and applying them to solve real-world problems. I am disciplined, hardworking, and dedicated to achieving excellence in every task I undertake.</p>
+      </div>
+    
+      <div class="skills-container">
+        <div class="skill-card">
+          <h2>Technical Skills</h2>
+          <ul class="skills-list">
+            <li>Java</li>
+            <li>Python</li>
+            <li>Spring Boot</li>
+            <li>C/C++</li>
+            <li>My SQL</li>
+            <li>PHP</li>
+            <li>HTML & CSS</li>
+            <li>Linux Shell</li>
+            <li>Git</li>
+            <li>MongoDB</li>
+            <li>REST APIs</li>
+            <li>JavaScript</li>
+            <li>C#</li>
+            <li>Coq</li>
+            <li>Yacc/Bison</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h2>Abstract Skills</h2>
+          <ul>
+            <li>Object-Oriented Programming (OOP)</li>
+            <li>Design Patterns</li>
+            <li>Data Structures & Algorithms</li>
+            <li>Agile Development & Scrum</li>
+            <li>Clean Code Practices</li>
+            <li>Problem Solving</li>
+            <li>Software Architecture: MVC</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h2>Soft Skills</h2>
+          <ul>
+            <li>Team Collaboration</li>
+            <li>Problem Solving</li>
+            <li>Adaptability</li>
+            <li>Eagerness to Learn</li> 
+            <li>Abstract Thinking</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h2>Courses</h2>
+          <ul class="skills-list">
+            <li>Java / Spring Boot</li> 
+            <li>Python</li>
+            <li>Object-Oriented Programming</li>
+            <li>Data Structures</li>
+            <li>Network Computing</li> 
+            <li>Neural Networks</li> 
+            <li>Artificial Intelligence</li>
+            <li>Machine Learning</li>
+            <li>Graph Algorithms</li> 
+            <li>Embedded Systems</li> 
+            <li>Operating Systems(Linux)</li>
+            <li>Techniques for Multiprocessor Programming</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h2>Educational</h2>
+          <h3>Bachelor's Degree</h3>
+          <p>Computer Science at Alexandru Ioan Cuza University of Iași</p>
+          <p>Year 3 (2022-2025)</p>
+          <h3>Languages skills:
+          </h3>
+          <ul>
+            <li>English (Intermediate)</li>
+            <li>Italian (Basic)</li>
+            <li>French (Basic)</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h2>Certifications</h2>
+          <p>MongoDB Certified</p>
+          <p><a href="assets/images/CertificatMongoDb.pdf">Download PDF</a></p>
+          <p><a href="assets/images/Cv2.0.pdf">Download My CV</a></p>
+        </div>
+
+      </div>
+    </section>
+    
+  </main>
+  <div id="footer"></div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch('assets/includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("header").innerHTML = data;
+        });
+
+      fetch('assets/includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer").innerHTML = data;
+        });
+      fetch('assets/includes/links.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("links").innerHTML = data;
+        });
+    });
+    
+  </script>
+</body>
+</html>
